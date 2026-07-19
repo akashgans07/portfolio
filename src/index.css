@@ -1,0 +1,245 @@
+
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root{
+
+--bg:#ffffff;
+--surface:#f4f4f5;
+--text:#18181b;
+
+}
+
+.dark{
+
+--bg:#09090B;
+--surface:#18181b;
+--text:#fafafa;
+
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  transition: background .35s ease, color .35s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: white;
+  color: black;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease;
+}
+::selection{
+  background:#fff;
+  color:#000;
+}
+html{
+  scroll-behavior:smooth;
+}
+body{
+    overflow-x:hidden;
+}
+section {
+  scroll-margin-top: 120px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slideUp {
+  animation: slideUp 0.35s ease;
+}
+body {
+    background: #09090B;
+}
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(circle at 20% 20%,
+        rgba(0,255,255,0.08),
+        transparent 35%),
+
+        radial-gradient(circle at 80% 70%,
+        rgba(255,255,255,0.04),
+        transparent 40%),
+
+        radial-gradient(circle at 60% 30%,
+        rgba(59,130,246,0.05),
+        transparent 35%);
+
+    z-index: -1;
+}
+::selection {
+
+    background: #22d3ee;
+
+    color: black;
+}
+::-webkit-scrollbar {
+
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+
+    background: #09090B;
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: #3f3f46;
+
+    border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: #22d3ee;
+}
+@keyframes float {
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+.float{
+
+animation:float 6s ease-in-out infinite;
+
+}
+@keyframes pageFade {
+
+    from{
+
+        opacity:0;
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+.page-fade{
+
+    animation:pageFade .9s ease;
+}
+.project-image{
+
+    transition:.5s;
+}
+
+.project-card:hover .project-image{
+
+    transform:scale(1.08);
+}
+@keyframes drift {
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-20px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+.particle{
+
+    animation:drift 8s ease-in-out infinite;
+
+}
+.brand-glow{
+
+filter:
+
+drop-shadow(0 0 12px rgba(34,211,238,.25))
+
+drop-shadow(0 0 35px rgba(34,211,238,.18));
+
+}
